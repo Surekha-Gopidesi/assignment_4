@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function addNumbers() {
+    const num1 = parseFloat(prompt("Enter first number:"));
+    const num2 = parseFloat(prompt("Enter second number:"));
+    alert(`Sum: ${num1 + num2}`);
+}
+
+function multiplyNumbers() {
+    const num1 = parseFloat(prompt("Enter first number:"));
+    const num2 = parseFloat(prompt("Enter second number:"));
+    alert(`Product: ${num1 * num2}`);
+}
+
+function subtractNumbers() {
+    const num1 = parseFloat(prompt("Enter first number:"));
+    const num2 = parseFloat(prompt("Enter second number:"));
+    alert(`Difference: ${num1 - num2}`);
+}
+
+function divideNumbers() {
+    const num1 = parseFloat(prompt("Enter first number:"));
+    const num2 = parseFloat(prompt("Enter second number:"));
+    if (num2 !== 0) {
+        alert(`Quotient: ${num1 / num2}`);
+    } else {
+        alert("Error: Division by zero!");
+    }
+}
+
+function main() {
+    while (true) {
+        const choice = prompt(`
+            Menu
+            1. Add
+            2. Multiply
+            3. Subtract
+            4. Divide
+            5. Exit
+            Enter your choice:
+        `);
+        
+        switch (choice) {
+            case "1":
+                addNumbers();
+                break;
+            case "2":
+                multiplyNumbers();
+                break;
+            case "3":
+                subtractNumbers();
+                break;
+            case "4":
+                divideNumbers();
+                break;
+             case "5":
+                alert("Exit....");
+                return;
+            default:
+                alert("Invalid choice. Please select valid one");
+        }
+    }
+}
+
+main();
+
+    </script>
+</body>
+</html>
